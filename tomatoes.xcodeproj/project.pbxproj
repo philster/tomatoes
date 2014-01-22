@@ -42,6 +42,9 @@
 		22C79B98188E944600E69273 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C79B8D188E944600E69273 /* AFURLRequestSerialization.m */; };
 		22C79B99188E944600E69273 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C79B8F188E944600E69273 /* AFURLResponseSerialization.m */; };
 		22C79B9A188E944600E69273 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C79B91188E944600E69273 /* AFURLSessionManager.m */; };
+		22EAB37F188F31DD00586DAF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22EAB37C188F31DD00586DAF /* SVProgressHUD.bundle */; };
+		22EAB380188F31DD00586DAF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EAB37E188F31DD00586DAF /* SVProgressHUD.m */; };
+		22EAB382188F322800586DAF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EAB381188F322800586DAF /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,11 @@
 		22C79B8F188E944600E69273 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		22C79B90188E944600E69273 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		22C79B91188E944600E69273 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		22EAB37B188F31DD00586DAF /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		22EAB37C188F31DD00586DAF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		22EAB37D188F31DD00586DAF /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		22EAB37E188F31DD00586DAF /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		22EAB381188F322800586DAF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22EAB382188F322800586DAF /* QuartzCore.framework in Frameworks */,
 				2212FE8B188EA445005F9692 /* MobileCoreServices.framework in Frameworks */,
 				2212FE89188EA30E005F9692 /* SystemConfiguration.framework in Frameworks */,
 				2222A3F4188DFACD002643FC /* CoreGraphics.framework in Frameworks */,
@@ -188,6 +197,7 @@
 		2222A3F0188DFACD002643FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22EAB381188F322800586DAF /* QuartzCore.framework */,
 				2212FE8A188EA445005F9692 /* MobileCoreServices.framework */,
 				2212FE88188EA30E005F9692 /* SystemConfiguration.framework */,
 				2222A3F1188DFACD002643FC /* Foundation.framework */,
@@ -203,6 +213,7 @@
 			children = (
 				22C79B7E188E944600E69273 /* AFNetworking */,
 				2212FE8F188EACD0005F9692 /* UIKit+AFNetworking */,
+				22EAB37A188F31DD00586DAF /* SVProgressHUD */,
 				2222A400188DFACD002643FC /* AppDelegate.h */,
 				2222A401188DFACD002643FC /* AppDelegate.m */,
 				2222A403188DFACD002643FC /* Main.storyboard */,
@@ -273,6 +284,18 @@
 				22C79B91188E944600E69273 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		22EAB37A188F31DD00586DAF /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				22EAB37B188F31DD00586DAF /* SVProgressHUD-Prefix.pch */,
+				22EAB37C188F31DD00586DAF /* SVProgressHUD.bundle */,
+				22EAB37D188F31DD00586DAF /* SVProgressHUD.h */,
+				22EAB37E188F31DD00586DAF /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = "UIKit+AFNetworking/SVProgressHUD";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +377,7 @@
 				2222A40A188DFACD002643FC /* Images.xcassets in Resources */,
 				2222A3FC188DFACD002643FC /* InfoPlist.strings in Resources */,
 				2222A405188DFACD002643FC /* Main.storyboard in Resources */,
+				22EAB37F188F31DD00586DAF /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +406,7 @@
 				2212FEA4188EACD0005F9692 /* UIProgressView+AFNetworking.m in Sources */,
 				22C79B99188E944600E69273 /* AFURLResponseSerialization.m in Sources */,
 				2222A3FE188DFACD002643FC /* main.m in Sources */,
+				22EAB380188F31DD00586DAF /* SVProgressHUD.m in Sources */,
 				22C79B7D188E84A000E69273 /* Movie.m in Sources */,
 				2212FEA2188EACD0005F9692 /* UIButton+AFNetworking.m in Sources */,
 				2212FEA3188EACD0005F9692 /* UIImageView+AFNetworking.m in Sources */,
